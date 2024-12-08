@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 1.5rem;
+  background-color: $color-primary-light;
+  color: $color-primary-dark;
+}
+
+::selection {
+  background-color: $color-accent-green;
+  color: $color-primary-dark;
+}
+
+.material-symbols-outlined {
+  user-select: none;
+}

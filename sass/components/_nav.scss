@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+
+.nav {
+  background-color: $color-primary-dark;
+  height: 7rem;
+
+  display: flex;
+
+  &-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      display: inline-block;
+      width: 10rem;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      & a {
+        font-size: 1.5rem;
+        color: $color-primary-light;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      &--active {
+        background-color: $color-primary-light;
+
+        & a {
+          color: $color-primary-dark;
+        }
+      }
+
+      &-line {
+        width: 100%;
+        height: 0.7rem;
+        background-color: $color-accent-yellow;
+        position: absolute;
+        bottom: -2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.5s;
+      }
+
+      &:hover &-line {
+        transform: scaleX(1);
+        background-color: $color-primary-light;
+      }
+    }
+
+    @media screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+}
+
+.burger-btn {
+  width: 7rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+
+  & span {
+    font-size: 3.5rem;
+    color: $color-primary-light;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    display: flex;
+  }
+}
