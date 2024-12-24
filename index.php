@@ -35,15 +35,15 @@
                 </span>
             </div>
             <div class="menu__item menu__item--3">
-                <a class="menu__item-title" href="#">Item 3</a>
+                <a class="menu__item-title" href="./music.php">Muzika</a>
                 <span class="material-symbols-outlined">
-                    language
+                    music_note
                 </span>
             </div>
             <div class="menu__item menu__item--4">
-                <a class="menu__item-title" href="#">Item 4</a>
+                <a class="menu__item-title" href="./books.php">Omiljene knjige</a>
                 <span class="material-symbols-outlined">
-                    language
+                    book_2
                 </span>
             </div>
             <div class="menu__item menu__item--5">

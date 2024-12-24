@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+.sites-container {
+  width: 90vw;
+  margin: 5rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+  justify-content: center;
+  gap: 5rem;
+
+  @media screen and (max-width: $bp-small) {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,126 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site {
+  height: 45rem;
+  border: 0.3rem solid $color-primary-dark;
+  border-radius: 0.5rem;
+  position: relative;
+
+  @include shadow(2rem, 2rem);
+
+  &-img {
+    height: 45%;
+    background-size: cover;
+    background-position: center;
+
+    &--1 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/delfi.png");
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/storygraph.png");
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/spotify.png");
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/google-fonts.png");
+    }
+
+    &--5 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/youtube.png");
+    }
+
+    &--6 {
+      background-image: linear-gradient(
+          45deg,
+          rgba($color-primary-dark, 0.7),
+          rgba($color-primary-dark, 0.7)
+        ),
+        url("/it-projekat/img/rd-live.png");
+    }
+  }
+
+  &-title {
+    width: max-content;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    background-color: $color-accent-green;
+    font-size: 3rem;
+    border: 0.3rem solid $color-primary-light;
+    transform: translateY(-50%);
+  }
+
+  &-link {
+    padding: 1rem 2rem;
+    background-color: $color-primary-dark;
+    margin-left: 2rem;
+    color: $color-primary-light;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-description {
+    height: 17rem;
+    background-color: $color-primary-dark;
+    margin: 2rem;
+    margin-top: 0;
+    padding: 1rem;
+    clip-path: inset(0rem 0rem 13.1rem 0rem);
+    transition: 0.3s cubic-bezier(0.92, 0.44, 0.61, 0.86);
+
+    &:hover {
+      clip-path: inset(0rem 0rem 0rem 0rem);
+    }
+
+    &__link {
+      color: $color-primary-light;
+      display: inline-block;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.site #wave {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}

@@ -14,6 +14,7 @@ body {
   font-size: 1.5rem;
   background-color: #f2e7c2;
   color: #423f35;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -190,6 +191,110 @@ body {
   font-size: 3.5rem;
 }
 
+.site {
+  height: 45rem;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 2rem 2rem #423f35;
+}
+.site-img {
+  height: 45%;
+  background-size: cover;
+  background-position: center;
+}
+.site-img--1 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/delfi.png");
+}
+.site-img--2 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/storygraph.png");
+}
+.site-img--3 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/spotify.png");
+}
+.site-img--4 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/google-fonts.png");
+}
+.site-img--5 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/youtube.png");
+}
+.site-img--6 {
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/rd-live.png");
+}
+.site-title {
+  width: max-content;
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+  background-color: #92a78c;
+  font-size: 3rem;
+  border: 0.3rem solid #f2e7c2;
+  transform: translateY(-50%);
+}
+.site-link {
+  padding: 1rem 2rem;
+  background-color: #423f35;
+  margin-left: 2rem;
+  color: #f2e7c2;
+}
+@media screen and (max-width: 600px) {
+  .site-link {
+    font-size: 1.2rem;
+  }
+}
+.site-description {
+  height: 17rem;
+  background-color: #423f35;
+  margin: 2rem;
+  margin-top: 0;
+  padding: 1rem;
+  clip-path: inset(0rem 0rem 13.1rem 0rem);
+  transition: 0.3s cubic-bezier(0.92, 0.44, 0.61, 0.86);
+}
+.site-description:hover {
+  clip-path: inset(0rem 0rem 0rem 0rem);
+}
+.site-description__link {
+  color: #f2e7c2;
+  display: inline-block;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+.site-description__text {
+  color: #f2e7c2;
+}
+
+.site #wave {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  padding: 1.5rem 3.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:focus {
+  outline: none;
+}
+.btn--primary {
+  background-color: #423f35;
+  color: #f2e7c2;
+}
+.btn--secondary {
+  background-color: #f2e7c2;
+  color: #423f35;
+}
+.btn--secondary:hover {
+  background-color: #e0cf95;
+}
+
 .home-header {
   text-align: center;
   padding: 2rem;
@@ -345,6 +450,167 @@ body {
 }
 .bio__text > p {
   margin-bottom: 1rem;
+}
+
+.sites-container {
+  width: 90vw;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+  justify-content: center;
+  gap: 5rem;
+}
+@media screen and (max-width: 600px) {
+  .sites-container {
+    width: 80vw;
+  }
+}
+
+.intro {
+  height: calc(100vh - 7rem);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.intro__content {
+  width: 100%;
+  height: 100%;
+  background-image: url("/it-projekat/img/graph (1).png");
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.intro__content-title {
+  font-size: 3.5rem;
+  color: #f2e7c2;
+}
+
+.rock {
+  height: 100vh;
+  background-color: #92a78c;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.rock__title {
+  font-size: 4rem;
+  padding: 1.5rem 2.5rem;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  background-color: #423f35;
+  color: #f2e7c2;
+  transform: rotateZ(-10deg);
+  position: relative;
+  align-self: start;
+  justify-self: start;
+}
+.rock__title::before, .rock__title::after {
+  content: "";
+  width: 10rem;
+  height: 1.5rem;
+  background-color: rgba(242, 231, 194, 0.5);
+  position: absolute;
+}
+.rock__title::before {
+  top: -0.5rem;
+  left: -3rem;
+  transform: rotateZ(-30deg);
+}
+.rock__title::after {
+  bottom: -0.5rem;
+  right: -3rem;
+  transform: rotateZ(-40deg);
+}
+.rock__songs {
+  background-color: #423f35;
+  color: #f2e7c2;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  justify-self: center;
+}
+.rock__songs-title {
+  border-bottom: 1px solid #f2e7c2;
+}
+.rock__songs-list {
+  list-style-type: none;
+}
+.rock__songs-list-item {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr;
+}
+.rock__songs-list-item__number {
+  grid-row: 1/3;
+  align-self: center;
+  font-size: 3rem;
+  color: #f7cd82;
+}
+.rock__songs-list-item__song, .rock__songs-list-item__band {
+  padding: 0.1rem;
+  padding-left: 2rem;
+}
+.rock__songs-list-item__song {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.rock__songs-list-item__band {
+  font-size: 1.4rem;
+}
+.rock__pictures {
+  position: relative;
+}
+.rock__pictures-container {
+  position: absolute;
+  transition: 0.3s;
+}
+.rock__pictures-container-img {
+  width: 22rem;
+  height: 28rem;
+  background-color: #f2e7c2;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem #423f35;
+  cursor: pointer;
+}
+.rock__pictures-container:hover {
+  z-index: 100;
+  transform: scale(1.1, 1.1);
+}
+.rock__pictures-container:hover .rock__pictures-container-img {
+  box-shadow: 0 0 0.5rem 0.3rem #423f35;
+}
+.rock__pictures-container--1 {
+  left: 15%;
+  z-index: 3;
+}
+.rock__pictures-container--1 .rock__pictures-container-img {
+  transform: rotateZ(5deg);
+}
+.rock__pictures-container--2 {
+  left: 5%;
+  z-index: 2;
+}
+.rock__pictures-container--2 .rock__pictures-container-img {
+  transform: rotateZ(-5deg);
+}
+.rock__pictures-container--3 {
+  top: 7%;
+  left: 30%;
+  z-index: 1;
+}
+.rock__pictures-container--3 .rock__pictures-container-img {
+  transform: rotateZ(7deg);
 }
 
 /*# sourceMappingURL=style.css.map */
