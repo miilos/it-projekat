@@ -295,6 +295,50 @@ body {
   background-color: #e0cf95;
 }
 
+.ranking {
+  background-color: #423f35;
+  color: #f2e7c2;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  justify-self: center;
+}
+@media screen and (max-width: 600px) {
+  .ranking {
+    width: 70%;
+  }
+}
+.ranking-title {
+  border-bottom: 1px solid #f2e7c2;
+}
+.ranking-list {
+  list-style-type: none;
+}
+.ranking-list-item {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr;
+}
+.ranking-list-item__number {
+  grid-row: 1/3;
+  align-self: center;
+  font-size: 3rem;
+  color: #f7cd82;
+}
+.ranking-list-item__name, .ranking-list-item__subtitle {
+  padding: 0.1rem;
+  padding-left: 2rem;
+}
+.ranking-list-item__name {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.ranking-list-item__subtitle {
+  font-size: 1.4rem;
+}
+
 .home-header {
   text-align: center;
   padding: 2rem;
@@ -493,89 +537,84 @@ body {
 }
 
 .rock {
-  height: 100vh;
   background-color: #92a78c;
+}
+
+.genre {
+  height: 100vh;
   padding: 2rem;
+  position: relative;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-.rock__title {
+@media screen and (max-width: 1024px) {
+  .genre {
+    height: min-content;
+    padding-bottom: 10rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+.genre__title {
   font-size: 4rem;
   padding: 1.5rem 2.5rem;
-  margin-top: 4rem;
-  margin-left: 4rem;
   background-color: #423f35;
   color: #f2e7c2;
-  transform: rotateZ(-10deg);
   position: relative;
-  align-self: start;
-  justify-self: start;
 }
-.rock__title::before, .rock__title::after {
+.genre__title--rock {
+  margin-top: 4rem;
+  margin-left: 4rem;
+  transform: rotateZ(-10deg);
+  align-self: start;
+  justify-self: center;
+}
+.genre__title--hiphop {
+  margin-top: 4rem;
+  margin-right: 4rem;
+  transform: rotateZ(10deg);
+  align-self: start;
+  justify-self: center;
+}
+@media screen and (max-width: 1024px) {
+  .genre__title {
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+}
+.genre__title::before, .genre__title::after {
   content: "";
   width: 10rem;
   height: 1.5rem;
   background-color: rgba(242, 231, 194, 0.5);
   position: absolute;
 }
-.rock__title::before {
+.genre__title::before {
   top: -0.5rem;
   left: -3rem;
   transform: rotateZ(-30deg);
 }
-.rock__title::after {
+.genre__title::after {
   bottom: -0.5rem;
   right: -3rem;
   transform: rotateZ(-40deg);
 }
-.rock__songs {
-  background-color: #423f35;
-  color: #f2e7c2;
-  width: 50%;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  align-self: center;
-  justify-self: center;
-}
-.rock__songs-title {
-  border-bottom: 1px solid #f2e7c2;
-}
-.rock__songs-list {
-  list-style-type: none;
-}
-.rock__songs-list-item {
-  margin-top: 0.5rem;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: min-content 1fr;
-}
-.rock__songs-list-item__number {
-  grid-row: 1/3;
-  align-self: center;
-  font-size: 3rem;
-  color: #f7cd82;
-}
-.rock__songs-list-item__song, .rock__songs-list-item__band {
-  padding: 0.1rem;
-  padding-left: 2rem;
-}
-.rock__songs-list-item__song {
-  font-weight: bold;
-  font-size: 1.7rem;
-}
-.rock__songs-list-item__band {
-  font-size: 1.4rem;
-}
-.rock__pictures {
+.genre__pictures {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
 }
-.rock__pictures-container {
+.genre__pictures-container {
   position: absolute;
   transition: 0.3s;
 }
-.rock__pictures-container-img {
+.genre__pictures-container-img {
   width: 22rem;
   height: 28rem;
   background-color: #f2e7c2;
@@ -583,34 +622,238 @@ body {
   box-shadow: 0 0 0.5rem #423f35;
   cursor: pointer;
 }
-.rock__pictures-container:hover {
+.genre__pictures-container:hover {
   z-index: 100;
   transform: scale(1.1, 1.1);
 }
-.rock__pictures-container:hover .rock__pictures-container-img {
+.genre__pictures-container:hover .genre__pictures-container-img {
   box-shadow: 0 0 0.5rem 0.3rem #423f35;
 }
-.rock__pictures-container--1 {
-  left: 15%;
+.genre__pictures-container--1 {
+  right: 25%;
   z-index: 3;
 }
-.rock__pictures-container--1 .rock__pictures-container-img {
+.genre__pictures-container--1 .genre__pictures-container-img {
   transform: rotateZ(5deg);
 }
-.rock__pictures-container--2 {
-  left: 5%;
+.genre__pictures-container--2 {
+  right: 40%;
   z-index: 2;
 }
-.rock__pictures-container--2 .rock__pictures-container-img {
+.genre__pictures-container--2 .genre__pictures-container-img {
   transform: rotateZ(-5deg);
 }
-.rock__pictures-container--3 {
+.genre__pictures-container--3 {
   top: 7%;
-  left: 30%;
+  right: 15%;
   z-index: 1;
 }
-.rock__pictures-container--3 .rock__pictures-container-img {
+.genre__pictures-container--3 .genre__pictures-container-img {
   transform: rotateZ(7deg);
+}
+.genre__next-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  padding: 1rem 1.2rem;
+  transition: 0.3s;
+}
+.genre__next-btn:hover {
+  bottom: 1.7rem;
+}
+
+.hiphop {
+  background-color: #f79e6b;
+}
+
+.indie {
+  background-color: #f7cd82;
+}
+
+.books__container {
+  height: min-content;
+  padding: 5rem 0;
+}
+.books__container-rating {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.books__container-rating-visible {
+  width: 50%;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.books__container-rating-visible:hover {
+  width: 100%;
+}
+.books__container-rating-visible:hover + .ranking {
+  height: 35rem;
+  padding: 2rem;
+}
+.books__container-rating-visible:hover + .ranking > * {
+  display: block;
+}
+.books__container-rating__bar {
+  height: 5rem;
+  background-color: #423f35;
+  cursor: pointer;
+}
+.books__container-rating__bar--5 {
+  width: 100%;
+}
+.books__container-rating__bar--4 {
+  width: 80%;
+}
+.books__container-rating__bar--3 {
+  width: 60%;
+}
+.books__container-rating__bar--2 {
+  width: 40%;
+}
+.books__container-rating__bar--1 {
+  width: 20%;
+}
+.books__container-rating__rating {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.books__container-rating .ranking {
+  width: 30%;
+  margin-left: 5rem;
+  align-self: flex-start;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.books__container-rating .ranking > * {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .books__container-rating .ranking {
+    margin-left: 2rem;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .books__container-rating .ranking {
+    width: 70%;
+  }
+}
+
+.sport {
+  padding: 2rem;
+}
+.sport .header {
+  margin-bottom: 3rem;
+}
+.sport__court {
+  width: 70rem;
+  height: 50rem;
+  background-image: url("/it-projekat/img/basketball-court-half.jpg");
+  background-size: 100%;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 2rem 2rem #423f35;
+}
+.sport__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.sport__text {
+  height: 50rem;
+  width: 40rem;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.5rem;
+  box-shadow: 2rem 2rem #423f35;
+}
+.sport__text-p {
+  font-size: 1.7rem;
+  padding: 2rem;
+}
+
+.basketball-wrapper-x {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  animation: move-basketball-x 3s ease-in-out 0s 5 alternate;
+}
+
+.basketball-wrapper-y {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f79e6b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  animation: move-basketball-y 3s ease-in-out 0s 5 alternate;
+}
+
+.basketball {
+  font-size: 5rem !important;
+}
+.basketball-x {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.basketball-x--1 {
+  top: 5%;
+  left: 5%;
+}
+.basketball-x--2 {
+  top: 70%;
+  left: 7%;
+}
+.basketball-x--3 {
+  top: 80%;
+  left: 50%;
+}
+
+@keyframes move-basketball-x {
+  0% {
+    top: 70%;
+  }
+  50% {
+    top: 10%;
+  }
+  100% {
+    top: 80%;
+  }
+}
+@keyframes move-basketball-y {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 10rem;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

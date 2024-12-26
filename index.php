@@ -47,9 +47,9 @@
                 </span>
             </div>
             <div class="menu__item menu__item--5">
-                <a class="menu__item-title" href="#">Item 5</a>
+                <a class="menu__item-title" href="./sports.php">Sport</a>
                 <span class="material-symbols-outlined">
-                    language
+                    sports_basketball
                 </span>
             </div>
             <div class="menu__item menu__item--6">

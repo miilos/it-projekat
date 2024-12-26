@@ -33,9 +33,9 @@
         <div class="site-description">
           <a href="https://delfi.rs/" target="_blank" class="site-description__link">https://delfi.rs/</a>
           <p class="site-description__text">
-            Od svih vecih domacih izdavackih kuca, Delfi ima najbolje dizajniran sajt,
+            Od svih većih domaćih izdavačkih kuća, Delfi ima najbolje dizajniran sajt,
             sa najboljim user experience-om, kao i najbolje online popuste. Zbog toga,
-            kada narucujem knjige, narucujem ih skoro iskljucivo na ovom sajtu.
+            kada naručujem knjige, naručujem ih skoro isključivo na ovom sajtu.
           </p>
         </div>
 
@@ -50,8 +50,8 @@
           <a href="https://thestorygraph.com/" target="_blank" class="site-description__link">https://thestorygraph.com/</a>
           <p class="site-description__text">
             Storygraph je aplikacija za logovanje knjiga i ostavljanje recenzija
-            koji je glavni konkurent Goodreads-u. Koristim ga zbog toga sto takodje
-            vodi statistiku o knjigama koje citam.
+            koji je glavni konkurent Goodreads-u. Koristim ga zbog toga što takođe
+            vodi statistiku o knjigama koje čitam.
           </p>
         </div>
 
@@ -65,7 +65,7 @@
         <div class="site-description">
           <a href="https://open.spotify.com/" target="_blank" class="site-description__link">https://open.spotify.com/</a>
           <p class="site-description__text">
-            Spotify je jedan od najvecih streaming servisa na svetu, i streaming sajt koji koristim redovno.
+            Spotify je jedan od najvećih streaming servisa na svetu, i streaming sajt koji koristim redovno.
           </p>
         </div>
 
@@ -78,7 +78,7 @@
         <div class="site-description">
           <a href="https://fonts.google.com/" target="_blank" class="site-description__link">https://fonts.google.com/</a>
           <p class="site-description__text">
-            Google fonts je jedan od prvih sajtova koje otvaram kada pocnem da radim na bilo kom projektu.
+            Google fonts je jedan od prvih sajtova koje otvaram kada počnem da radim na bilo kom projektu.
             Osim fontova, ima i biblioteku ikonica koju je jako lako koristiti.
           </p>
         </div>
@@ -92,7 +92,7 @@
         <div class="site-description">
           <a href="https://www.youtube.com/" target="_blank" class="site-description__link">https://www.youtube.com/</a>
           <p class="site-description__text">
-            Isto kao i vecina drugih ljudi, gledam Youtube umesto TV-a.
+            Isto kao i većina drugih ljudi, gledam Youtube umesto TV-a.
           </p>
         </div>
 
@@ -105,7 +105,7 @@
         <div class="site-description">
           <a href="https://rd-live.com/sports/basketball" target="_blank" class="site-description__link">https://rd-live.com/sports/basketball</a>
           <p class="site-description__text">
-            Rd-live je jedan od najpouydanijih streaming sajtova koji prenosi sve utakmice najpopularnijih sportova. 
+            Rd-live je jedan od najpouzdanijih streaming sajtova koji prenosi sve utakmice najpopularnijih sportova.
           </p>
         </div>
 

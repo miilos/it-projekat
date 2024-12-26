@@ -29,27 +29,57 @@
 }
 
 .rock {
-  height: 100vh;
   background-color: $color-accent-green;
+}
+
+.genre {
+  height: 100vh;
   padding: 2rem;
+  position: relative;
 
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
+  @media screen and (max-width: $bp-large) {
+    height: min-content;
+    padding-bottom: 10rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
   &__title {
     font-size: 4rem;
     padding: 1.5rem 2.5rem;
-    margin-top: 4rem;
-    margin-left: 4rem;
     background-color: $color-primary-dark;
     color: $color-primary-light;
-    transform: rotateZ(-10deg);
     position: relative;
 
-    align-self: start;
-    justify-self: start;
+    &--rock {
+      margin-top: 4rem;
+      margin-left: 4rem;
+      transform: rotateZ(-10deg);
+
+      align-self: start;
+      justify-self: center;
+    }
+
+    &--hiphop {
+      margin-top: 4rem;
+      margin-right: 4rem;
+      transform: rotateZ(10deg);
+
+      align-self: start;
+      justify-self: center;
+    }
+
+    @media screen and (max-width: $bp-large) {
+      align-self: center;
+      justify-self: center;
+      margin: 0;
+    }
 
     &::before,
     &::after {
@@ -73,57 +103,10 @@
     }
   }
 
-  &__songs {
-    background-color: $color-primary-dark;
-    color: $color-primary-light;
-    width: 50%;
-    padding: 2rem;
-    border-radius: 0.5rem;
-
-    align-self: center;
-    justify-self: center;
-
-    &-title {
-      border-bottom: 1px solid $color-primary-light;
-    }
-
-    &-list {
-      list-style-type: none;
-
-      &-item {
-        margin-top: 0.5rem;
-
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: min-content 1fr;
-
-        &__number {
-          grid-row: 1 / 3;
-          align-self: center;
-          font-size: 3rem;
-          color: $color-accent-yellow;
-        }
-
-        &__song,
-        &__band {
-          padding: 0.1rem;
-          padding-left: 2rem;
-        }
-
-        &__song {
-          font-weight: bold;
-          font-size: 1.7rem;
-        }
-
-        &__band {
-          font-size: 1.4rem;
-        }
-      }
-    }
-  }
-
   &__pictures {
     position: relative;
+
+    @include flex($align: center, $justify: center);
 
     &-container {
       position: absolute;
@@ -142,38 +125,59 @@
         z-index: 100;
         transform: scale(1.1, 1.1);
 
-        & .rock__pictures-container-img {
+        & .genre__pictures-container-img {
           box-shadow: 0 0 0.5rem 0.3rem $color-primary-dark;
         }
       }
 
       &--1 {
-        left: 15%;
+        right: 25%;
         z-index: 3;
 
-        & .rock__pictures-container-img {
+        & .genre__pictures-container-img {
           transform: rotateZ(5deg);
         }
       }
 
       &--2 {
-        left: 5%;
+        right: 40%;
         z-index: 2;
 
-        & .rock__pictures-container-img {
+        & .genre__pictures-container-img {
           transform: rotateZ(-5deg);
         }
       }
 
       &--3 {
         top: 7%;
-        left: 30%;
+        right: 15%;
         z-index: 1;
 
-        & .rock__pictures-container-img {
+        & .genre__pictures-container-img {
           transform: rotateZ(7deg);
         }
       }
     }
   }
+
+  &__next-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    padding: 1rem 1.2rem;
+    transition: 0.3s;
+
+    &:hover {
+      bottom: 1.7rem;
+    }
+  }
+}
+
+.hiphop {
+  background-color: $color-accent-orange;
+}
+
+.indie {
+  background-color: $color-accent-yellow;
 }

@@ -7,7 +7,7 @@ function return_menu($active_link) {
         ['./sites.php', 'Omiljene stranice'],
         ['./music.php', 'Muzika'],
         ['./books.php', 'Omiljene knjige'],
-        ['#', 'Page 6'],
+        ['./sports.php', 'Sport'],
         ['#', 'Page 7'],
         ['#', 'Page 8'],
     ];
