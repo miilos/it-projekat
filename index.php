@@ -53,9 +53,9 @@
                 </span>
             </div>
             <div class="menu__item menu__item--6">
-                <a class="menu__item-title" href="#">Item 6</a>
+                <a class="menu__item-title" href="./projects.php">Projekti</a>
                 <span class="material-symbols-outlined">
-                    language
+                    tab
                 </span>
             </div>
             <div class="menu__item menu__item--7">

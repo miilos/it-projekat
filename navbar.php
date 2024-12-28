@@ -8,7 +8,7 @@ function return_navbar($active_link) {
         ['./music.php', 'Muzika'],
         ['./books.php', 'Omiljene knjige'],
         ['./sports.php', 'Sport'],
-        ['#', 'Page 7'],
+        ['./projects.php', 'Projekti'],
         ['#', 'Page 8'],
     ];
     $menu_html = '

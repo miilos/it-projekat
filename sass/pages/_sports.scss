@@ -4,24 +4,50 @@
 .sport {
   padding: 2rem;
 
+  @media screen and (max-width: $bp-medium) {
+    padding: 4rem;
+  }
+
   & .header {
     margin-bottom: 3rem;
   }
 
   &__court {
     width: 70rem;
-    height: 50rem;
-    background-image: url("/it-projekat/img/basketball-court-half.jpg");
-    background-size: 100%;
     border: 0.3rem solid $color-primary-dark;
     border-radius: 0.5rem;
     position: relative;
 
     @include shadow(2rem, 2rem);
+
+    &--basketball {
+      width: 70rem;
+      height: 50rem;
+      background-image: url("/it-projekat/img/basketball-court-half.jpg");
+      background-size: 100%;
+
+      @media screen and (max-width: $bp-medium) {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &--football {
+      height: 30rem;
+      background-image: url("/it-projekat/img/football-field.jpg");
+      background-size: 100%;
+      background-position-y: -1rem;
+
+      @media screen and (max-width: $bp-medium) {
+        background-size: cover;
+        background-position: center;
+      }
+    }
   }
 
   &__content {
     @include flex($align: center, $justify: flex-start, $gap: 5rem);
+    flex-wrap: wrap;
   }
 
   &__text {
@@ -31,6 +57,11 @@
     border-radius: 0.5rem;
 
     @include shadow(2rem, 2rem);
+
+    @media screen and (max-width: $bp-medium) {
+      width: 100%;
+      height: max-content;
+    }
 
     &-p {
       font-size: 1.7rem;
@@ -45,7 +76,7 @@
   position: absolute;
   top: 70%;
   left: 10%;
-  animation: move-basketball-x 3s ease-in-out 0s 5 alternate;
+  animation: move-basketball-x 3s ease-in-out 0s infinite alternate;
 }
 
 .basketball-wrapper-y {
@@ -59,7 +90,11 @@
 
   @include flex($align: center, $justify: center);
 
-  animation: move-basketball-y 3s ease-in-out 0s 5 alternate;
+  animation: move-basketball-y 3s ease-in-out 0s infinite alternate;
+
+  @media screen and (max-width: $bp-smallest) {
+    animation: move-basketball-y--mobile 3s ease-in-out 0s infinite alternate;
+  }
 }
 
 .basketball {
@@ -81,7 +116,11 @@
 
     &--3 {
       top: 80%;
-      left: 50%;
+      left: 33rem;
+
+      @media screen and (max-width: $bp-smallest) {
+        left: 20rem;
+      }
     }
   }
 }
@@ -115,5 +154,110 @@
 
   100% {
     left: 30rem;
+  }
+}
+
+@keyframes move-basketball-y--mobile {
+  0% {
+    left: 1rem;
+  }
+
+  25% {
+    left: 10rem;
+  }
+
+  50% {
+    left: 1rem;
+  }
+
+  100% {
+    left: 20rem;
+  }
+}
+
+.football {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 5rem;
+
+  &-x {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--1 {
+      left: 10%;
+    }
+
+    &--2 {
+      left: 20%;
+      animation: move-reciever 2s ease-in-out 0s infinite alternate;
+    }
+  }
+}
+
+.football-wrapper--x {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  animation: move-football--x 2s ease-in-out 0s infinite alternate;
+}
+
+.football-wrapper--y {
+  width: 100%;
+  height: 100%;
+  background-color: $color-primary-dark;
+  border-top-left-radius: 59%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 59%;
+  border-bottom-left-radius: 1rem;
+  position: absolute;
+  animation: move-football--y 2s ease-in-out 0s infinite alternate;
+
+  & > span {
+    font-size: 5rem;
+    color: $color-primary-light;
+
+    @include flex();
+  }
+}
+
+@keyframes move-reciever {
+  0% {
+    left: 20%;
+  }
+
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes move-football--x {
+  0% {
+    left: 13%;
+  }
+
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes move-football--y {
+  0% {
+    bottom: 0;
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    bottom: 7rem;
+    transform: rotateZ(45deg);
+  }
+
+  100% {
+    bottom: 0;
+    transform: rotateZ(90deg);
   }
 }
