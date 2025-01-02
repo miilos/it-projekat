@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.languages {
+  width: 100%;
+  padding: 1rem 0;
+
+  @include flex($align: center, $justify: flex-start, $gap: 1rem);
+  flex-wrap: wrap;
+
+  .language {
+    width: max-content;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+.html {
+  background-color: #e34e27;
+}
+
+.css {
+  background-color: #30a7d7;
+}
+
+.js {
+  background-color: #f7df1d;
+}
+
+.node {
+  background-color: #72aa64;
+}
+
+.express {
+  background-color: #969696;
+}
+
+.mongo {
+  background-color: #0faa50;
+}
+
+.mongoose {
+  background-color: #840c10;
+}
+
+.pug {
+  background-color: #efcca4;
+}
+
+.sass {
+  background-color: #c69;
+}

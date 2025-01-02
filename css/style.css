@@ -204,22 +204,22 @@ body {
   background-position: center;
 }
 .site-img--1 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/delfi.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/delfi.png");
 }
 .site-img--2 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/storygraph.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/storygraph.png");
 }
 .site-img--3 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/spotify.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/spotify.png");
 }
 .site-img--4 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/google-fonts.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/google-fonts.png");
 }
 .site-img--5 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/youtube.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/youtube.png");
 }
 .site-img--6 {
-  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("/it-projekat/img/rd-live.png");
+  background-image: linear-gradient(45deg, rgba(66, 63, 53, 0.7), rgba(66, 63, 53, 0.7)), url("../img/rd-live.png");
 }
 .site-title {
   width: max-content;
@@ -295,6 +295,21 @@ body {
   background-color: #e0cf95;
 }
 
+.github-btn {
+  background-color: #1b1f23;
+  padding-right: 2rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.github-btn__img {
+  width: 5rem;
+}
+
 .ranking {
   background-color: #423f35;
   color: #f2e7c2;
@@ -337,6 +352,61 @@ body {
 }
 .ranking-list-item__subtitle {
   font-size: 1.4rem;
+}
+
+.languages {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.languages .language {
+  width: max-content;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+}
+
+.html {
+  background-color: #e34e27;
+}
+
+.css {
+  background-color: #30a7d7;
+}
+
+.js {
+  background-color: #f7df1d;
+}
+
+.node {
+  background-color: #72aa64;
+}
+
+.express {
+  background-color: #969696;
+}
+
+.mongo {
+  background-color: #0faa50;
+}
+
+.mongoose {
+  background-color: #840c10;
+}
+
+.pug {
+  background-color: #efcca4;
+}
+
+.sass {
+  background-color: #c69;
 }
 
 .home-header {
@@ -522,7 +592,7 @@ body {
 .intro__content {
   width: 100%;
   height: 100%;
-  background-image: url("/it-projekat/img/graph (1).png");
+  background-image: url("../img/graph (1).png");
   background-position: center 40%;
   background-repeat: no-repeat;
   display: flex;
@@ -771,7 +841,7 @@ body {
 .sport__court--basketball {
   width: 70rem;
   height: 50rem;
-  background-image: url("/it-projekat/img/basketball-court-half.jpg");
+  background-image: url("../img/basketball-court-half.jpg");
   background-size: 100%;
 }
 @media screen and (max-width: 768px) {
@@ -782,7 +852,7 @@ body {
 }
 .sport__court--football {
   height: 30rem;
-  background-image: url("/it-projekat/img/football-field.jpg");
+  background-image: url("../img/football-field.jpg");
   background-size: 100%;
   background-position-y: -1rem;
 }
@@ -990,6 +1060,153 @@ body {
     bottom: 0;
     transform: rotateZ(90deg);
   }
+}
+.projects__container {
+  height: max-content;
+  padding: 4rem;
+}
+
+.projects {
+  height: max-content;
+  width: 80%;
+  margin: 0 auto;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.5rem;
+  box-shadow: 2rem 2rem #423f35;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 2fr);
+  }
+}
+
+.project {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.project__title {
+  width: max-content;
+  padding: 1rem;
+}
+.project__img {
+  border: 0.1rem solid #423f35;
+  border-radius: 0.3rem;
+}
+
+.sim-racing {
+  background-color: #423f35;
+  color: #f2e7c2;
+}
+@media screen and (max-width: 600px) {
+  .sim-racing {
+    order: 2;
+    border: 0.1rem solid #f2e7c2;
+    border-radius: 0.3rem;
+  }
+}
+.sim-racing__img {
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .sim-racing__img {
+    width: 100%;
+  }
+}
+.sim-racing .project__title {
+  background-color: #f2e7c2;
+  color: #423f35;
+}
+
+@media screen and (max-width: 600px) {
+  .mapster {
+    order: 1;
+  }
+}
+.mapster__img {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .mapster__img {
+    width: 50%;
+  }
+}
+.mapster .project__title {
+  background-color: #423f35;
+  color: #f2e7c2;
+}
+
+.guitar-container {
+  height: calc(100vh - 7rem);
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+@media screen and (max-width: 768px) {
+  .guitar-container {
+    height: min-content;
+  }
+}
+
+.guitar {
+  height: min-content;
+  width: 50%;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.3rem;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 2rem 2rem #423f35;
+}
+@media screen and (max-width: 1024px) {
+  .guitar {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .guitar {
+    width: 90%;
+  }
+}
+.guitar__video-container {
+  width: 50%;
+  border: 0.3rem solid #423f35;
+  border-radius: 0.3rem;
+}
+.guitar__video-container__caption {
+  padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .guitar__video-container {
+    width: 100%;
+  }
+}
+.guitar__video {
+  width: 100%;
+}
+.guitar__p {
+  margin-top: 2rem;
+  width: 80%;
+}
+.guitar__wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */

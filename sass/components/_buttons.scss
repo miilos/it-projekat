@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .btn {
   font-size: 1.5rem;
@@ -24,5 +25,18 @@
     &:hover {
       background-color: $color-primary-medium;
     }
+  }
+}
+
+.github-btn {
+  background-color: #1b1f23;
+  padding-right: 2rem;
+  color: #fff;
+  text-decoration: none;
+
+  @include flex($justify: flex-start, $gap: 1rem);
+
+  &__img {
+    width: 5rem;
   }
 }

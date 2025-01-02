@@ -8,6 +8,7 @@
 @use "components/site-card";
 @use "components/buttons";
 @use "components/ranking";
+@use "components/languages";
 
 @use "pages/home";
 @use "pages/about";
@@ -15,3 +16,5 @@
 @use "pages/music";
 @use "pages/books";
 @use "pages/sports";
+@use "pages/projects";
+@use "pages/guitar";

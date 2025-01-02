@@ -59,9 +59,9 @@
                 </span>
             </div>
             <div class="menu__item menu__item--7">
-                <a class="menu__item-title" href="#">Item 7</a>
+                <a class="menu__item-title" href="./guitar.php">Gitara</a>
                 <span class="material-symbols-outlined">
-                    language
+                    headphones
                 </span>
             </div>
         </div>

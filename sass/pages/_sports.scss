@@ -23,7 +23,7 @@
     &--basketball {
       width: 70rem;
       height: 50rem;
-      background-image: url("/it-projekat/img/basketball-court-half.jpg");
+      background-image: url("../img/basketball-court-half.jpg");
       background-size: 100%;
 
       @media screen and (max-width: $bp-medium) {
@@ -34,7 +34,7 @@
 
     &--football {
       height: 30rem;
-      background-image: url("/it-projekat/img/football-field.jpg");
+      background-image: url("../img/football-field.jpg");
       background-size: 100%;
       background-position-y: -1rem;
 

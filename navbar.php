@@ -1,16 +1,16 @@
 <?php
 
 function return_navbar($active_link) {
-    $menu_items = [
-        ['./index.php', 'Home'],
-        ['./about.php', 'O meni'],
-        ['./sites.php', 'Omiljene stranice'],
-        ['./music.php', 'Muzika'],
-        ['./books.php', 'Omiljene knjige'],
-        ['./sports.php', 'Sport'],
-        ['./projects.php', 'Projekti'],
-        ['#', 'Page 8'],
-    ];
+    $menu_items = array(
+        array('./index.php', 'Home'),
+        array('./about.php', 'O meni'),
+        array('./sites.php', 'Omiljene stranice'),
+        array('./music.php', 'Muzika'),
+        array('./books.php', 'Omiljene knjige'),
+        array('./sports.php', 'Sport'),
+        array('./projects.php', 'Projekti'),
+        array('./guitar.php', 'Gitara'),
+    );
     $menu_html = '
     <nav class="nav">
       <div class="burger-btn">

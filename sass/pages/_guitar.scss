@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.guitar-container {
+  height: calc(100vh - 7rem);
+  padding: 2rem;
+
+  @include flex();
+
+  @media screen and (max-width: $bp-medium) {
+    height: min-content;
+  }
+}
+
+.guitar {
+  height: min-content;
+  width: 50%;
+  border: 0.3rem solid $color-primary-dark;
+  border-radius: 0.3rem;
+  padding: 2rem;
+  position: relative;
+
+  @include shadow(2rem, 2rem);
+
+  @media screen and (max-width: $bp-large) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    width: 90%;
+  }
+
+  &__video-container {
+    width: 50%;
+    border: 0.3rem solid $color-primary-dark;
+    border-radius: 0.3rem;
+
+    &__caption {
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+  }
+
+  &__video {
+    width: 100%;
+  }
+
+  &__p {
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  &__wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+  }
+}
