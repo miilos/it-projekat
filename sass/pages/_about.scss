@@ -13,6 +13,10 @@
     height: min-content;
     align-items: flex-start;
   }
+
+  @media screen and (max-width: $bp-smallest) {
+    padding: 2rem;
+  }
 }
 
 .info-container {

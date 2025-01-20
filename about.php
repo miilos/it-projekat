@@ -59,7 +59,7 @@
         <div class="bio__text">
           <p>
             Rođen sam 28.10.2004. godine. Živim u Bačkoj Topoli, a tokom nedelje
-            sam u studentskom domu u Subotici. Završio sam IT smer u Tehničkoj
+            boravim u studentskom domu u Subotici. Završio sam IT smer u Tehničkoj
             školi "Ivan Sarić" u Subotici, i trenutno sam na drugoj godini
             studija na VTŠ-u, na smeru Informatika.
           </p>
